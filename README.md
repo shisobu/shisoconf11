@@ -10,6 +10,7 @@ $ bundle install --path vendor/bundle
 ### Test
 #### Local
 run Sinatra at local, should use [Pow](http://pow.cx/) and [Powder](https://github.com/Rodreegez/powder)
+
 ```
 $ gem install powder
 $ cd shisoconf11
