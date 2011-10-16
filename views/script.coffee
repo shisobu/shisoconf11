@@ -10,13 +10,13 @@ channel.bind('new-post', (data) ->
   .append(
     $('<a>')
     .attr(
-      href: 'http://twitter.com/#!/marutanm'
+      href: "http://twitter.com/#!/#{data.user.screen_name}"
       target: '_blank'
     )
     .append(
       $('<img>')
       .attr(
-        src: 'http://a0.twimg.com/profile_images/1578464491/mee_uzumaki_normal.gif'
+        src: data.user.profile_image_url
         alt: ''
         title: ''
       )
@@ -28,34 +28,33 @@ channel.bind('new-post', (data) ->
     .append(
       $('<a>').addClass('screen_name')
       .attr(
-        href: ''
+        href: "http://twitter.com/#!/#{data.user.screen_name}"
         target: '_blank'
       )
-      .text('screen_name_here')
+      .text(data.user.screen_name)
     )
     .append(
       $('<span>').addClass('name')
-      .text('full_name')
+      .text(data.user.name)
     )
   )
   .append(
     $('<div>').addClass('body')
-    .text('hogehoge')
+    .text(data.text)
   )
   .append(
     $('<div>').addClass('time')
     .append(
       $('<a>')
       .attr(
-        href: 'http://twitter.com/#!/synboo/status/125260583196037122'
+        href: "http://twitter.com/#!/#{data.user.screen_name}/status/#{data.id_str}"
         target: '_blank'
       )
-      .text('2011-10-23 10:00:00')
+      .text(data.created_at)
     )
   )
   $stream
   .append($left)
   .append($right)
   .prependTo('#tweets')
-  return nil
 )
