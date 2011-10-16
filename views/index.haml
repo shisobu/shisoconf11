@@ -8,17 +8,6 @@
   %script{:src => "/js/jquery.tipsy.js"}
   :javascript
     var pusherkey = "#{@pusherkey}";
-    // todo merge to coffee
-    $(document).ready(function() {
-      $('.members img').tipsy({gravity: 's'});
-      $('#logo a').tipsy({gravity: 'e'});
-      $('h2').click(function() {
-        var target = $(this).offset().top;
-        $('html, body').animate({
-          scrollTop: target
-        }, 100);
-      });
-    });
   %script{:src => "/script.js"}
 
 %body

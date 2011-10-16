@@ -1,6 +1,15 @@
 Pusher.log = (message) ->
   window.console.log(message)
 
+# tipsy
+$ ->
+  $('.members img').tipsy(gravity: 's')
+  $('#logo a').tipsy(gravity: 'e')
+  $('h2').click ->
+    target = $(@).offset().top
+    $('html, body').animate(scrollTop: target, 100)
+
+# pusher
 pusher = new Pusher(pusherkey);
 channel = pusher.subscribe('twitter');
 channel.bind('new-post', (data) ->
