@@ -1,106 +1,110 @@
 * {
-	margin: 0;
-	padding: 0;
+    margin: 0;
+    padding: 0;
 }
 body {
-	padding: 20px 30px;
-	margin: 0 auto;
-	text-align: center;
-	background-color: #EEE;
-	color: #333;
-	font-family: Georgia, "Times New Roman", Times, serif;
-	width: 600px;
+    padding: 20px 30px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #EEE;
+    color: #333;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    width: 600px;
 }
 a {
-	color: #920783;
-	text-decoration: none;
+    color: #920783;
+    text-decoration: none;
 }
 a:hover, h2:hover {
-	text-shadow: 0 0 8px rgba(92,07,83,.75);
+    text-shadow: 0 0 8px rgba(92,07,83,.75);
 }
 h1, h2, h3 {
-	font-weight: normal;
-	font-style: italic;
-	color: #920783;
+    font-weight: normal;
+    font-style: italic;
+    color: #920783;
 }
 h1 {
-	font-size: 50px;
+    font-size: 50px;
 }
 h1#logo img {
-	height: 45px;
-	position: relative;
-	top: 5px;
-	left: 2px;
+    height: 45px;
+    position: relative;
+    top: 5px;
+    left: 2px;
 }
 h2 {
-	font-size: 20px;
-	margin-top: 20px;
+    font-size: 20px;
+    margin-top: 20px;
 }
 div#contents {
-	text-align: left;
+    text-align: left;
 }
 div.box {
-	margin: 10px 0;
-	padding: 5px 10px;
-	border-radius: 5px;
-	border: solid 1px #CCC;
-	background-color: #FFF;
-	box-shadow: 2px 2px 5px #777;
+    margin: 10px 0;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: solid 1px #CCC;
+    background-color: #FFF;
+    box-shadow: 2px 2px 5px #777;
 }
 div.members img {
-	margin-top: 4px;
-	margin-left: 2px;
-	width: 30px;
-	height: 30px;
-	border: solid 1px #CCC;
+    margin-top: 4px;
+    margin-left: 2px;
+    width: 30px;
+    height: 30px;
+    border: solid 1px #CCC;
 }
 div.no-tweet {
-	font-size: 20px;
-	font-family: Arial, "Helvetica Neue", sans-serif;
-	border: solid 1px #CCC;
-	text-align: center;
-	padding: 35px 10px;
-	margin: 5px 0;
-	background-color: ivory;
+    font-size: 20px;
+    font-family: Arial, "Helvetica Neue", sans-serif;
+    border: solid 1px #CCC;
+    text-align: center;
+    padding: 35px 10px;
+    margin: 5px 0;
+    background-color: ivory;
 }
 div.stream {
-	clear: both;
-	border-bottom: dashed 2px #CCC;
-	padding: 10px 0;
-	font-family: Arial, "Helvetica Neue", sans-serif;
+    clear: both;
+    border-bottom: dashed 2px #CCC;
+    padding: 10px 0;
+    font-family: Arial, "Helvetica Neue", sans-serif;
 }
 div.stream img {
-	width: 50px;
-	height: 50px;
-	border: solid 1px #CCC;
+    width: 50px;
+    height: 50px;
+    border: solid 1px #CCC;
 }
 div.stream div.left {
-	float: left;
+    float: left;
 }
 div.stream div.right {
-	margin-left: 60px;
-	min-height: 50px;
+    margin-left: 60px;
+    min-height: 50px;
 }
 div.stream a.screen_name {
-	font-size: 15px;
-	font-weight: bold;
+    font-size: 15px;
+    font-weight: bold;
 }
 div.stream span.name {
-	font-size: 13px;
-	color: #999;
+    font-size: 13px;
+    color: #999;
 }
 div.stream div.body {
-	font-size: 15px;
-	line-height: 19px;
-	word-wrap: break-word;
+    font-size: 15px;
+    line-height: 19px;
+    word-wrap: break-word;
 }
 div.stream div.time {
-	font-size: 11px;
-	color: #999;
+    font-size: 11px;
+    color: #999;
 }
 div.stream div.time a{
-	color: #999;
+    color: #999;
 }
 div.stream div.time a:hover {
-	text-shadow: 0 0 8px rgba(0,0,0,.50);
+    text-shadow: 0 0 8px rgba(0,0,0,.50);
+}
+div.fb-like {
+    position: relative;
+    top: -4px;
 }
