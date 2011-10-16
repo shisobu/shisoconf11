@@ -1,115 +1,114 @@
 !!! 5
 %head
-	%title Shiso Conference 2011 - of the shiso, by the shiso, for the shiso.
-	%link{'href' => '/css/shisoconf11.css', 'rel' => 'stylesheet', 'type' => 'text/css', 'media' => 'screen'}
-	%link{'href' => '/css/tipsy.css', 'rel' => 'stylesheet', 'type' => 'text/css', 'media' => 'screen'}
-	%script{:src => "http://js.pusherapp.com/1.9/pusher.min.js"}
-	%script{:src => "http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"}
-	%script{:src => "/js/jquery.tipsy.js"}
-	:javascript
-		var pusherkey = "#{@pusherkey}";
-		// todo merge to coffee
-		$(document).ready(function() {
-			$('.members img').tipsy({gravity: 's'});
-			$('#logo a').tipsy({gravity: 'e'});
-			$('h2').click(function() {
-				var target = $(this).offset().top;
-				$('html, body').animate({
-					scrollTop: target
-				}, 100);
-			});
-		});
-	%script{:src => "/script.js"}
+  %title Shiso Conference 2011 - of the shiso, by the shiso, for the shiso.
+  %link{'href' => '/css/shisoconf11.css', 'rel' => 'stylesheet', 'type' => 'text/css', 'media' => 'screen'}
+  %link{'href' => '/css/tipsy.css', 'rel' => 'stylesheet', 'type' => 'text/css', 'media' => 'screen'}
+  %script{:src => "http://js.pusherapp.com/1.9/pusher.min.js"}
+  %script{:src => "http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"}
+  %script{:src => "/js/jquery.tipsy.js"}
+  :javascript
+    var pusherkey = "#{@pusherkey}";
+    // todo merge to coffee
+    $(document).ready(function() {
+      $('.members img').tipsy({gravity: 's'});
+      $('#logo a').tipsy({gravity: 'e'});
+      $('h2').click(function() {
+        var target = $(this).offset().top;
+        $('html, body').animate({
+          scrollTop: target
+        }, 100);
+      });
+    });
+  %script{:src => "/script.js"}
 
 %body
-	/ facebook plugin
-	/ todo comment out because haml syntax error...
-	/ #facebook_sdk
-	/ 	<div id="fb-root"></div>
-	/ 	<script>(function(d, s, id) {
-	/ 	  var js, fjs = d.getElementsByTagName(s)[0];
-	/ 	  if (d.getElementById(id)) {return;}
-	/ 	  js = d.createElement(s); js.id = id;
-	/ 	  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
-	/ 	  fjs.parentNode.insertBefore(js, fjs);
-	/ 	}(document, 'script', 'facebook-jssdk'));</script>
-	
-	#contents
-		%h1#logo
-			%a{:href => "/", :alt => "2011/10/23", :title => "2011/10/23"}
-				%img{:src => "http://f.hatena.ne.jp/images/fotolife/s/superbrothers/20090708/20090708233701.png"}
-				Shiso Conference 2011
-		#social_button
-			<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://shisoconf11.heroku.com/" data-text="#shisoconf" data-count="horizontal" data-via="shisobu">Tweet</a><script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
-			<div class="fb-like" data-href="http://" data-send="false" data-layout="button_count" data-width="50" data-show-faces="true" data-colorscheme="dark" data-font="arial"></div>
-		%h2 Shisobu Members
-		.members
-			.box
-				%a{:href => "http://twitter.com/#!/Ajido", :target => "_blank"}
-					%img{:src => "http://a2.twimg.com/profile_images/679286203/19526_reasonably_small.jpg", :alt => "Ajido", :title => "Ajido"}
-				%a{:href => "http://twitter.com/#!/kei_q", :target => "_blank"}
-					%img{:src => "http://a0.twimg.com/profile_images/1014024752/kecR8_reasonably_small.jpg", :alt => "kei_q", :title => "kei_q"}
-				%a{:href => "http://twitter.com/#!/kurone_c", :target => "_blank"}
-					%img{:src => "http://a1.twimg.com/profile_images/1547139510/prof3_normal.jpg", :alt => "kurone_c", :title => "kurone_c"}
-				%a{:href => "http://twitter.com/#!/marutanm", :target => "_blank"}
-					%img{:src => "http://a0.twimg.com/profile_images/52003660/marutanm_bigger.jpg", :alt => "marutanm", :title => "marutanm"}
-				%a{:href => "http://twitter.com/#!/nokuno", :target => "_blank"}
-					%img{:src => "http://a1.twimg.com/profile_images/790362096/nokuno_normal.png", :alt => "nokuno", :title => "nokuno"}
-				%a{:href => "http://twitter.com/#!/matsumoo", :target => "_blank"}
-					%img{:src => "http://a2.twimg.com/profile_images/1179366034/______normal.png", :alt => "matsumoo", :title => "matsumoo"}
-				%a{:href => "http://twitter.com/#!/qluto", :target => "_blank"}
-					%img{:src => "http://a0.twimg.com/profile_images/1374906023/qluto_normal.jpg", :alt => "qluto", :title => "qluto"}
-				%a{:href => "http://twitter.com/#!/seiryo", :target => "_blank"}
-					%img{:src => "http://a3.twimg.com/profile_images/1448369562/suwako_glitch_normal.png", :alt => "seiryo", :title => "seiryo"}
-				%a{:href => "http://twitter.com/#!/summerwind", :target => "_blank"}
-					%img{:src => "http://a3.twimg.com/profile_images/1198786715/summerwindsan150_150_normal.png", :alt => "summerwind", :title => "summerwind"}
-				%a{:href => "http://twitter.com/#!/superbrothers", :target => "_blank"}
-					%img{:src => "http://a1.twimg.com/profile_images/1546861678/avatar_cfe631722241_128_normal.png", :alt => "superbrothers", :title => "superbrothers"}
-				%a{:href => "http://twitter.com/#!/synboo", :target => "_blank"}
-					%img{:src => "http://a0.twimg.com/profile_images/1578464491/mee_uzumaki_normal.gif", :alt => "synboo", :title => "synboo"}
-				%a{:href => "http://twitter.com/#!/TakuyaOkamoto", :target => "_blank"}
-					%img{:src => "http://a3.twimg.com/profile_images/1287628254/6713822_origin_normal.png", :alt => "TakuyaOkamoto", :title => "TakuyaOkamoto"}
-				%a{:href => "http://twitter.com/#!/toilet_lunch", :target => "_blank"}
-					%img{:src => "http://a0.twimg.com/profile_images/1167708987/moro_present_normal.jpg", :alt => "toilet_lunch", :title => "toilet_lunch"}
-				%a{:href => "http://twitter.com/#!/YamaGutsu", :target => "_blank"}
-					%img{:src => "http://a1.twimg.com/profile_images/1430863386/me_normal.jpg", :alt => "YamaGutsu", :title => "YamaGutsu"}
-				%a{:href => "http://twitter.com/#!/youzaka", :target => "_blank"}
-					%img{:src => "http://a2.twimg.com/profile_images/1577881614/youzaka3_normal.png", :alt => "youzaka", :title => "youzaka"}
-		%h2 Special Guest
-		.members
-			.box
-				%a{:href => "http://twitter.com/#!/okuryu", :target => "_blank"}
-					%img{:src => "http://a2.twimg.com/profile_images/15823132/okuryu_normal.jpg", :alt => "okuryu", :title => "okuryu"}
-				%a{:href => "http://twitter.com/#!/sonatax", :target => "_blank"}
-					%img{:src => "http://a1.twimg.com/profile_images/1494950213/IMG_1359_normal.png", :alt => "sonatax", :title => "sonatax"}
-				%a{:href => "http://twitter.com/#!/t_fridge", :target => "_blank"}
-					%img{:src => "http://a2.twimg.com/profile_images/999945729/gasmask_square_normal.png", :alt => "t_fridge", :title => "t_fridge"}
-				%a{:href => "http://twitter.com/#!/makimoto", :target => "_blank"}
-					%img{:src => "http://a0.twimg.com/profile_images/1560628941/sideways_normal.png", :alt => "makimoto", :title => "makimoto"}
-				%a{:href => "http://twitter.com/#!/mirakui", :target => "_blank"}
-					%img{:src => "http://a2.twimg.com/profile_images/1296753997/image_normal.jpg", :alt => "mirakui", :title => "mirakui"}
-				%a{:href => "http://twitter.com/#!/tohae", :target => "_blank"}
-					%img{:src => "http://a1.twimg.com/profile_images/1183718012/foxk6_normal.png", :alt => "tohae", :title => "tohae"}
-				%a{:href => "http://twitter.com/#!/okadapan", :target => "_blank"}
-					%img{:src => "http://a0.twimg.com/profile_images/1567835290/hamu___normal.png", :alt => "okadapan", :title => "okadapan"}
-				%a{:href => "http://twitter.com/#!/mkataigi", :target => "_blank"}
-					%img{:src => "http://a0.twimg.com/profile_images/29109002/1017877_34524669_normal.jpg", :alt => "mkataigi", :title => "mkataigi"}
-				%a{:href => "http://twitter.com/#!/Yeshi", :target => "_blank"}
-					%img{:src => "http://a1.twimg.com/profile_images/1581372767/hrw09_5_normal.png", :alt => "Yeshi", :title => "Yeshi"}
-		%h2 Links
-		.members
-			.box
-				%a{:href => "http://shisobu.g.hatena.ne.jp/keyword/%E7%B4%AB%E8%98%87%E3%82%AB%E3%83%B3%E3%83%95%E3%82%A1%E3%83%AC%E3%83%B3%E3%82%B9%202011", :target => "_blank"}
-					%img{:src => "http://favicon.hatena.ne.jp/?url=http://g.hatena.ne.jp/", :alt => "はてなグループ", :title => "はてなグループ"}
-				%a{:href => "http://twitter.com/#!/shisobu", :target => "_blank"}
-					%img{:src => "https://si0.twimg.com/images/dev/cms/intents/bird/bird_blue/bird_32_blue.png", :alt => "twitter", :title => "twitter"}
-				%a{:href => "https://github.com/Shisobu/shisoconf11", :target => "_blank"}
-					%img{:src => "http://a3.twimg.com/profile_images/651575553/twittergithub2_reasonably_small.png", :alt => "github", :title => "github"}
-				%a{:href => "http://shisobu.in", :target => "_blank"}
-					%img{:src => "http://f.hatena.ne.jp/images/fotolife/s/superbrothers/20090708/20090708233701.png", :alt => "shisobu.in", :title => "shisobu.in"}
-		%h2 twitter stream of "shisoconf"
-		.box#tweets
-			.no-tweet
-				Tweet including "#shisoconf" now.
-				%br
-				Then it appears here realtime!
+
+  #fb-root
+  :javascript
+    (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) {return;}
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+
+  #contents
+    %h1#logo
+      %a{:href => "/", :alt => "2011/10/23", :title => "2011/10/23"}
+        %img{:src => "http://f.hatena.ne.jp/images/fotolife/s/superbrothers/20090708/20090708233701.png"}
+        Shiso Conference 2011
+    #social_button
+      <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://shisoconf11.heroku.com/" data-text="#shisoconf" data-count="horizontal" data-via="shisobu">Tweet</a><script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
+      <div class="fb-like" data-href="http://" data-send="false" data-layout="button_count" data-width="50" data-show-faces="true" data-colorscheme="dark" data-font="arial"></div>
+    %h2 Shisobu Members
+    .members
+      .box
+        %a{:href => "http://twitter.com/#!/Ajido", :target => "_blank"}
+          %img{:src => "http://a2.twimg.com/profile_images/679286203/19526_reasonably_small.jpg", :alt => "Ajido", :title => "Ajido"}
+        %a{:href => "http://twitter.com/#!/kei_q", :target => "_blank"}
+          %img{:src => "http://a0.twimg.com/profile_images/1014024752/kecR8_reasonably_small.jpg", :alt => "kei_q", :title => "kei_q"}
+        %a{:href => "http://twitter.com/#!/kurone_c", :target => "_blank"}
+          %img{:src => "http://a1.twimg.com/profile_images/1547139510/prof3_normal.jpg", :alt => "kurone_c", :title => "kurone_c"}
+        %a{:href => "http://twitter.com/#!/marutanm", :target => "_blank"}
+          %img{:src => "http://a0.twimg.com/profile_images/52003660/marutanm_bigger.jpg", :alt => "marutanm", :title => "marutanm"}
+        %a{:href => "http://twitter.com/#!/nokuno", :target => "_blank"}
+          %img{:src => "http://a1.twimg.com/profile_images/790362096/nokuno_normal.png", :alt => "nokuno", :title => "nokuno"}
+        %a{:href => "http://twitter.com/#!/matsumoo", :target => "_blank"}
+          %img{:src => "http://a2.twimg.com/profile_images/1179366034/______normal.png", :alt => "matsumoo", :title => "matsumoo"}
+        %a{:href => "http://twitter.com/#!/qluto", :target => "_blank"}
+          %img{:src => "http://a0.twimg.com/profile_images/1374906023/qluto_normal.jpg", :alt => "qluto", :title => "qluto"}
+        %a{:href => "http://twitter.com/#!/seiryo", :target => "_blank"}
+          %img{:src => "http://a3.twimg.com/profile_images/1448369562/suwako_glitch_normal.png", :alt => "seiryo", :title => "seiryo"}
+        %a{:href => "http://twitter.com/#!/summerwind", :target => "_blank"}
+          %img{:src => "http://a3.twimg.com/profile_images/1198786715/summerwindsan150_150_normal.png", :alt => "summerwind", :title => "summerwind"}
+        %a{:href => "http://twitter.com/#!/superbrothers", :target => "_blank"}
+          %img{:src => "http://a1.twimg.com/profile_images/1546861678/avatar_cfe631722241_128_normal.png", :alt => "superbrothers", :title => "superbrothers"}
+        %a{:href => "http://twitter.com/#!/synboo", :target => "_blank"}
+          %img{:src => "http://a0.twimg.com/profile_images/1578464491/mee_uzumaki_normal.gif", :alt => "synboo", :title => "synboo"}
+        %a{:href => "http://twitter.com/#!/TakuyaOkamoto", :target => "_blank"}
+          %img{:src => "http://a3.twimg.com/profile_images/1287628254/6713822_origin_normal.png", :alt => "TakuyaOkamoto", :title => "TakuyaOkamoto"}
+        %a{:href => "http://twitter.com/#!/toilet_lunch", :target => "_blank"}
+          %img{:src => "http://a0.twimg.com/profile_images/1167708987/moro_present_normal.jpg", :alt => "toilet_lunch", :title => "toilet_lunch"}
+        %a{:href => "http://twitter.com/#!/YamaGutsu", :target => "_blank"}
+          %img{:src => "http://a1.twimg.com/profile_images/1430863386/me_normal.jpg", :alt => "YamaGutsu", :title => "YamaGutsu"}
+        %a{:href => "http://twitter.com/#!/youzaka", :target => "_blank"}
+          %img{:src => "http://a2.twimg.com/profile_images/1577881614/youzaka3_normal.png", :alt => "youzaka", :title => "youzaka"}
+    %h2 Special Guest
+    .members
+      .box
+        %a{:href => "http://twitter.com/#!/okuryu", :target => "_blank"}
+          %img{:src => "http://a2.twimg.com/profile_images/15823132/okuryu_normal.jpg", :alt => "okuryu", :title => "okuryu"}
+        %a{:href => "http://twitter.com/#!/sonatax", :target => "_blank"}
+          %img{:src => "http://a1.twimg.com/profile_images/1494950213/IMG_1359_normal.png", :alt => "sonatax", :title => "sonatax"}
+        %a{:href => "http://twitter.com/#!/t_fridge", :target => "_blank"}
+          %img{:src => "http://a2.twimg.com/profile_images/999945729/gasmask_square_normal.png", :alt => "t_fridge", :title => "t_fridge"}
+        %a{:href => "http://twitter.com/#!/makimoto", :target => "_blank"}
+          %img{:src => "http://a0.twimg.com/profile_images/1560628941/sideways_normal.png", :alt => "makimoto", :title => "makimoto"}
+        %a{:href => "http://twitter.com/#!/mirakui", :target => "_blank"}
+          %img{:src => "http://a2.twimg.com/profile_images/1296753997/image_normal.jpg", :alt => "mirakui", :title => "mirakui"}
+        %a{:href => "http://twitter.com/#!/tohae", :target => "_blank"}
+          %img{:src => "http://a1.twimg.com/profile_images/1183718012/foxk6_normal.png", :alt => "tohae", :title => "tohae"}
+        %a{:href => "http://twitter.com/#!/okadapan", :target => "_blank"}
+          %img{:src => "http://a0.twimg.com/profile_images/1567835290/hamu___normal.png", :alt => "okadapan", :title => "okadapan"}
+        %a{:href => "http://twitter.com/#!/mkataigi", :target => "_blank"}
+          %img{:src => "http://a0.twimg.com/profile_images/29109002/1017877_34524669_normal.jpg", :alt => "mkataigi", :title => "mkataigi"}
+        %a{:href => "http://twitter.com/#!/Yeshi", :target => "_blank"}
+          %img{:src => "http://a1.twimg.com/profile_images/1581372767/hrw09_5_normal.png", :alt => "Yeshi", :title => "Yeshi"}
+    %h2 Links
+    .members
+      .box
+        %a{:href => "http://shisobu.g.hatena.ne.jp/keyword/%E7%B4%AB%E8%98%87%E3%82%AB%E3%83%B3%E3%83%95%E3%82%A1%E3%83%AC%E3%83%B3%E3%82%B9%202011", :target => "_blank"}
+          %img{:src => "http://favicon.hatena.ne.jp/?url=http://g.hatena.ne.jp/", :alt => "はてなグループ", :title => "はてなグループ"}
+        %a{:href => "http://twitter.com/#!/shisobu", :target => "_blank"}
+          %img{:src => "https://si0.twimg.com/images/dev/cms/intents/bird/bird_blue/bird_32_blue.png", :alt => "twitter", :title => "twitter"}
+        %a{:href => "https://github.com/Shisobu/shisoconf11", :target => "_blank"}
+          %img{:src => "http://a3.twimg.com/profile_images/651575553/twittergithub2_reasonably_small.png", :alt => "github", :title => "github"}
+        %a{:href => "http://shisobu.in", :target => "_blank"}
+          %img{:src => "http://f.hatena.ne.jp/images/fotolife/s/superbrothers/20090708/20090708233701.png", :alt => "shisobu.in", :title => "shisobu.in"}
+    %h2 twitter stream of "shisoconf"
+    .box#tweets
+      .no-tweet
+        Tweet including "#shisoconf" now.
+        %br
+        Then it appears here realtime!
