@@ -49,7 +49,7 @@ channel.bind('new-post', (data) ->
   )
   .append(
     $('<div>').addClass('body').attr('id', 'tweetText')
-    .text(data.text)
+    .text(data.text).autolink()
   )
   .append(
     $('<div>').addClass('time')
