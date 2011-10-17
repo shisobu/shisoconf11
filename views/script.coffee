@@ -48,7 +48,7 @@ channel.bind('new-post', (data) ->
     )
   )
   .append(
-    $('<div>').addClass('body')
+    $('<div>').addClass('body').attr('id', 'tweetText')
     .text(data.text)
   )
   .append(
@@ -66,4 +66,9 @@ channel.bind('new-post', (data) ->
   .append($left)
   .append($right)
   .prependTo('#tweets')
+
+  twttr.anywhere (twitter) ->
+    twitter.linkifyUsers()
+    twitter("#tweetText").linkifyUsers()
+
 )
