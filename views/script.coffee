@@ -59,7 +59,7 @@ channel.bind('new-post', (data) ->
         href: "http://twitter.com/#!/#{data.user.screen_name}/status/#{data.id_str}"
         target: '_blank'
       )
-      .text(data.created_at)
+      .text(Date(data.created_at))
     )
   )
   $stream
