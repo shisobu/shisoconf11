@@ -81,9 +81,6 @@ channel.bind('new-post', (data) ->
       .append($left)
       .append($right)
       .appendTo('#tweets')
-
-  twttr.anywhere (twitter) ->
-    twitter.linkifyUsers()
-    twitter("#tweetText").linkifyUsers()
+      twttr.anywhere (twitter) -> twitter("#tweetText").linkifyUsers()
 
 )
