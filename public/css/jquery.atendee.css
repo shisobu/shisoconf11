@@ -1,0 +1,89 @@
+/* the norm */
+#atendee-notice-wrapper {
+	position:fixed;
+	top:20px;
+	right:20px;
+	width:301px;
+	z-index:9999;
+}
+#atendee-notice-wrapper.top-left {
+    left: 20px;
+    right: auto;
+}
+#atendee-notice-wrapper.bottom-right {
+    top: auto;
+    left: auto;
+    bottom: 20px;
+    right: 20px;
+}
+#atendee-notice-wrapper.bottom-left {
+    top: auto;
+    right: auto;
+    bottom: 20px;
+    left: 20px;
+}
+.atendee-item-wrapper {
+	position:relative;
+	margin:0 0 10px 0;
+	background:url('../images/ie-spacer.gif'); /* ie7/8 fix */ 
+}
+.atendee-top {
+	background:url(../images/gritter.png) no-repeat left -30px;
+	height:10px;
+}
+.hover .atendee-top {
+	background-position:right -30px;
+}
+.atendee-bottom {
+	background:url(../images/gritter.png) no-repeat left bottom;
+	height:8px;
+	margin:0;
+}
+.hover .atendee-bottom {
+	background-position: bottom right;
+}
+.atendee-item {
+	display:block;
+	background:url(../images/gritter.png) no-repeat left -40px;
+	color:#eee;
+	padding:2px 11px 8px 11px;
+	font-size: 11px;
+	font-family:verdana;
+}
+.hover .atendee-item {
+	background-position:right -40px;
+}
+.atendee-item p {
+	padding:0;
+	margin:0;
+}
+.atendee-close {
+	display:none;
+	position:absolute;
+	top:5px;
+	left:3px;
+	background:url(../images/gritter.png) no-repeat left top;
+	cursor:pointer;
+	width:30px;
+	height:30px;
+}
+.atendee-title {
+	font-size:14px;
+	font-weight:bold;
+	padding:0 0 7px 0;
+	display:block;
+	text-shadow:1px 1px #000; /* Not supported by IE :( */
+}
+.atendee-image {
+	width:48px;
+	height:48px;
+	float:left;
+}
+.atendee-with-image,
+.atendee-without-image {
+	padding:0 0 5px 0;
+}
+.atendee-with-image {
+	width:220px;
+	float:right;
+}

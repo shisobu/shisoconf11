@@ -1,5 +1,15 @@
-Pusher.log = (message) ->
-  window.console.log(message)
+# Pusher.log = (message) ->
+#   window.console.log(message)
+
+# check tweets from atendee or not
+$growl = (username) ->
+  shisobu = ['Ajido', 'kei_q', 'kurone_c', 'marutanm', 'matsumoo', 'nokuno', 'qluto', 'seiryo', 'summerwind', 'superbrothers', 'synboo', 'TakuyaOkamoto', 'toilet_lunch', 'YamaGutsu', 'youzaka']
+  guests = ['sonatax', 't_fridge', 'makimoto', 'mirakui', 'tohae', 'okadapan', 'mkataigi', 'Yeshi', 'moro_tyo']
+  atendee = shisobu.concat guests
+  if ($.inArray(username, atendee) > 0)
+    return $.atendee
+  else
+    return $.gritter
 
 # tipsy
 $ ->
@@ -13,7 +23,7 @@ $ ->
 pusher = new Pusher(pusherkey);
 channel = pusher.subscribe('twitter');
 channel.bind('new-post', (data) ->
-  $.gritter.add
+  $growl(data.user.screen_name).add
     title: data.user.name
     text: data.text
     image: data.user.profile_image_url
